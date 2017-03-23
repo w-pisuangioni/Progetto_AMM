@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NerdBook - Profilo </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="William Pisu">
+        <meta name="keywords" content="NerdBook, profilo,">   
+    </head>
+    <body>
+        <header>
+            <div id="Title">
+                <h1>Profilo - NerdBook</h1>  
+            </div> 
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="descrizione.html"> descrizione </a> </li>
+                <li><a href="profilo.html"> profilo </a> </li>
+                <li><a href="bacheca.html"> bacheca </a> </li>
+            </ul>
+        </nav>
+<!-- Create una sezione di navigazione che permetta di raggiungere la pagina descrizione.html e login.html-->
+        <div id="divBody">
+            <div id="formProfilo">
+                <form action="Profilo.html" method="get">  
+                    <label for="nome_utente">Nome Utente</label>
+                        <input type="text" name="nomeutente" id="nome_utente" value="NOME" />
+                    <label for="cognome_utente">Cognome</label>
+                        <input type="text" name="cognomeutente" id="cognome_utente" value="Cognome" />
+                    <label for="imgprofilo">foto</label>
+                        <input name="fotoprofilo" id="imgprofilo" type="file">
+                    <label for="textType">Frase di presentazione</label>
+                        <textarea rows="4" cols="20" name="text_Type" id="textType"> Puoi inserire qui una frase di presentzione</textarea>
+                    <label for="data">Data di nascita</label>
+                        <input name="data" id="data" type="date"/>
+                    <label for="pswd">Password: </label>
+                        <input type="password" name="pswd" id="pswd" value="oscurato" />
+                    <label for="pswdconf">Confirm Password: </label>
+                        <input type="password" name="pswdconf" id="pswdconf" value="oscurato" />
+                    <button type="submit">Salva</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
