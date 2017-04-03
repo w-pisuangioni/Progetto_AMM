@@ -8,3 +8,56 @@ and open the template in the editor.
     Author     : pisuw
 */
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+sfondo 
+
+il colore  testo 
+
+
+
+
+
+/* ++++++++++++++++++++++++++++++++++++
+++++++++++++ tesk 3 +++++++++++++++++++
+inserire colore sfondo
+colore e font per <il> del testo
+Proprietà dei titoli da <h1> <h2> <h3>
+proprietà dei link
+visualizzazione dei campi di input
+++++++++++++++++++++++++++++++++++++++++*/ 
+
+/* ++++++++++++++++++++++++++++++++++++
+++++++++++++ tesk 4 +++++++++++++++++++
+regole per:
+***************bacheca*****************
+LIBERTà COLORI E FONT 
+inserire le immagini decorative tramite css
+NON CONSIDERARE IL FORM DI RICERCA NE QUELLO
+PER L'INSERIMENTO DI UN NUOVO POST PER IL MOMENTO'
+++++++++++++++++++++++++++++++++++++++++*/ 
+
+/* ++++++++++++++++++++++++++++++++++++
+++++++++++++ tesk 5 +++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++*/ 
+/* GRANDE*/
+@media only screen and (min-width: 1024px){
+
+}
+/*MEDIO*/
+@media only screen and (max-width: 1024px)
+                   and (min-width: 480px){
+
+
+}
+
+/*PICCOLO*/
+@media only screen and (max-width: 480px){
+
+
+}
