@@ -28,7 +28,8 @@ body{
     /*position: static;*/
     background-color: #e4e4e4;
     font: 17px/25px "Georgia" ,Times New Roman, Times, serif;
-    height: auto;
+    height: 100%;
+    width: 100%;
     margin: 0px;
 }
 
@@ -149,46 +150,9 @@ header nav{
        width: 90%;
 }
 
-/*barra laterale*/
-#leftbar{
-    width: 15%;
-    height: 100%;
-    float: left;
-    padding: 5px;
-    padding-bottom: 100%;
-    font-size: 20px;
-    margin-top: 0%;
-    margin-left: 0%;
-    background-color: white;
-    border: 1px black solid;
-
-}
-#leftbar strong:after {
-    content: '\A\ ';
-    white-space: pre;
-
-}
-/* regole scritte sotto per inserimento icone decorative
-#persone e #gruppi span:before{
-}
-*/
-
-/* GRANDE*/
-@media only screen and (min-width: 1024px){
-
-}
-
-/*MEDIO*/
-@media only screen and (max-width: 1023px) and (min-width: 481px){
 
 
-}
 
-/*PICCOLO*/
-@media only screen and (max-width: 480px){
-
-
-}
 
 
 #top {
@@ -279,10 +243,6 @@ nav {
 
 
 
-    
-
-
-
 /*inizio area gestione campi di input vari tipi*/
 input[type="text"], input[type="password"], input[type="date"]{
     background-color: #fff;
@@ -311,10 +271,53 @@ button {
 }
 
 /*fine area gestione campi di input vari tipi*/
-#topLogin h1{
-    text-align: center;
+
+
+/* GRANDE*/
+@media only screen and (min-width: 1024px){
+/*barra laterale*/
+#leftbar{
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    padding-bottom: 100%;
+    font-size: 20px;
+    margin-top: 0%;
+    margin-left: 0%;
+    background-color: white;
+    border: 1px black solid;
+
+}
+#leftbar strong:after {
+    content: '\A\ ';
+    white-space: pre;
+
+}
+/* regole scritte sotto per inserimento icone decorative
+#persone e #gruppi span:before{
+}
+*/
 }
 
+/*MEDIO*/
+@media only screen and (max-width: 1023px) and (min-width: 481px){
+    #leftbar{
+        display: none;
+    }
+
+}
+
+/*PICCOLO*/
+@media only screen and (max-width: 480px){
+    #leftbar{
+        display: none;
+    }
+
+}
+
+
+/*++++++++ Area Immagini Decorative inserite tramite css +++++++++*/
 /*immagini decorative da css*/
 /* immagine decorativa per header pagina login */
 #topLogin h1 span:before {
@@ -327,6 +330,7 @@ button {
 #log :before{
     content: url("img/profilo_def_litle.png");
 }
+@media only screen and (max-width: 1023px){
 /*immagine decorativa per utenti barra laterale*/
 #Persone span:before{
     content: url("img/profilo_def_litle.png");
@@ -344,3 +348,5 @@ button {
     content: '\A\ ';
     white-space: pre;
 }
+}
+/*+++++++ Fine Area Immagini Decorative inserite tramite css +++++++*/
