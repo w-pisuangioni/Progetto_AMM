@@ -278,7 +278,7 @@ button {
     }
     .post {
         width:90%;
-        background: white;
+        background: #82baf2;
         box-shadow: 0 0 10px rgba(0,0,0,.2);
         margin: 5%; 
     }
@@ -289,17 +289,28 @@ button {
         box-shadow: 0 0 10px rgba(0,0,0,.2); 
     }
     
-    
+    #imgprofilobig{
+       margin:5%;
+       box-shadow: 0 0 10px rgba(0,0,0,.2);  
+       
+   }
     
 /* GRANDE*/
 @media only screen and (min-width: 1024px){
-#container_profilo span :before {
+#container_profilo h1 span :before {
        content: url("img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg");
+       
+}
 
-}
+
+
 #container_profilo #formProfilo{
-    
+    margin: 5%;
+    margin-left: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
+
 /*barra laterale*/
 #leftbar{
     width: 15%;
