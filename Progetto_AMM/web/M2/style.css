@@ -54,7 +54,7 @@ h2{
 h3{
     margin-top: 0px; /*Esaminato con inspector*/
     color: #155274;
-    font: 10px/20px "Georgia" ,Times New Roman, Times, serif;
+    font: 20px "Georgia" ,Times New Roman, Times, serif;
     font-weight: bold;
 }
 
@@ -271,9 +271,35 @@ button {
 
 /*fine area gestione campi di input vari tipi*/
 
-
+    #post{
+        margin:2%;
+        background: #82baf2;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    .post {
+        width:90%;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 5%; 
+    }
+ 
+    #container_profilo{
+        margin:5%;
+        background: #82baf2;
+        box-shadow: 0 0 10px rgba(0,0,0,.2); 
+    }
+    
+    
+    
 /* GRANDE*/
 @media only screen and (min-width: 1024px){
+#container_profilo span :before {
+       content: url("img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg");
+
+}
+#container_profilo #formProfilo{
+    
+}
 /*barra laterale*/
 #leftbar{
     width: 15%;
@@ -297,28 +323,97 @@ button {
 #persone e #gruppi span:before{
 }
 */
+
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.faq{
+    width:90%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    margin: 5%;
+}
+.faq h3{
+        box-shadow: 0 0 10px rgba(0,0,1,.1);
+        margin:1%;
+    }
+
+   
 }
 
 /*MEDIO*/
 @media only screen and (max-width: 1023px) and (min-width: 481px){
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
     #leftbar{
         display: none;
     }
     .faq{
         width: 90%;
         background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 5%;
     }
-    
+    .faq h3{
+         box-shadow: 0 0 10px rgba(0,0,1,.1);
+         margin:1%
+    }
+    #divBody{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 /*PICCOLO*/
+
+
 @media only screen and (max-width: 480px){
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
     #leftbar{
         display: none;
     }
     .faq{
-        width: 100%;
+        width: 94%;
         background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 3%;
+    }
+    .faq h3{
+         box-shadow: 0 0 10px rgba(0,0,1,.1);
+         margin:1%
+    }
+    #divBody{
+        margin-left: 0%;
+        margin-right: 0%;
     }
 }
 
