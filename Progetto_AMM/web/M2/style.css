@@ -8,28 +8,6 @@ and open the template in the editor.
     Author     : pisuw
 */
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-/*sfondo 
-
-il colore  testo 
-
-
-
-*/
-
-/* ++++++++++++++++++++++++++++++++++++
-++++++++++++ tesk 3 +++++++++++++++++++
-inserire colore sfondo
-colore e font per <il> del testo
-Proprietà dei titoli da <h1> <h2> <h3>
-proprietà dei link
-visualizzazione dei campi di input
-++++++++++++++++++++++++++++++++++++++++*/ 
-
 /* ++++++++++++++++++++++++++++++++++++
 ++++++++++++ tesk 4 +++++++++++++++++++
 regole per:
@@ -40,18 +18,131 @@ NON CONSIDERARE IL FORM DI RICERCA NE QUELLO
 PER L'INSERIMENTO DI UN NUOVO POST PER IL MOMENTO'
 ++++++++++++++++++++++++++++++++++++++++*/ 
 
-/* ++++++++++++++++++++++++++++++++++++
-++++++++++++ tesk 5 +++++++++++++++++++
-
-
-++++++++++++++++++++++++++++++++++++++++*/ 
-/* GRANDE*/
-@media only screen and (max-width: 1024px){
+/****** inizio *********
+inserimento colore sfondo
+colore e font per <il> del testo
+Proprietà dei titoli da <h1> <h2> <h3>
+proprietà dei link 
+************************/
+body{
+    position: static;
+    background-color: #e4e4e4;
+    font: 17px/25px "Georgia" ,Times New Roman, Times, serif;
+    height: auto;
 
 }
+
+il{
+    font: 10px/17px "Georgia" ,Times New Roman, Times, serif;
+}
+
+h1{
+    margin: 0px; /*Esaminato con inspector*/
+    color: #155276;
+    font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+h2{
+    margin-top: 0px; /*Esaminato con inspector*/
+    color: #155274;
+    font: 25px/40px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+a{ font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+    
+}
+
+a:link{
+   
+    text-decoration: none;
+    color: #A0C952;
+    /*font-weight: bold;*/
+}
+
+a:visited{
+    font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+    text-decoration: none;
+    color: #A0C952;
+    font-weight: bold;
+}
+
+a:hover{
+    background-color: red;
+    font-weight: bold;
+}
+
+
+nav ul, nav li{
+
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+ 
+    border-collapse:collapse;
+ 
+}
+nav li {
+       border-right: 1px black solid;
+}
+
+
+nav li.active{
+    background: #155276;
+    text-decoration: #0055FF;
+}
+/***** fine  colori ecc.(task3)*****/
+
+header nav{
+    font: 35px/50px "Comic Sans MS", Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#divBody{
+    background: white;
+    width: 70%;
+    border-color: black;
+    border-width: 10px;
+    /*margin-top: 100px;*/
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+   /* box-shadow: 0 0 10px rgba(0,0,0,.2);*/
+}
+
+#LoginBody{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    background: white;
+    width: 30%;
+    margin: 5px;
+    border: 1px black solid;
+    display: block;
+    float: none;
+    padding: 1%;
+}
+
+#Logincontenent{
+       left: 5%;
+       right: 5%;
+       padding-bottom: 5px;
+       position: relative;
+       width: 90%;
+}
+
+/* GRANDE*/
+@media only screen and (min-width: 1024px){
+
+}
+
 /*MEDIO*/
-@media only screen and (max-width: 1024px)
-                   and (min-width: 480px){
+@media only screen and (max-width: 1024px) and (min-width: 480px){
 
 
 }
@@ -59,5 +150,134 @@ PER L'INSERIMENTO DI UN NUOVO POST PER IL MOMENTO'
 /*PICCOLO*/
 @media only screen and (max-width: 480px){
 
+
+}
+
+
+#top {
+    position: fixed;
+    float:none;
+    background-color: black;
+    width: 98%;
+    display: block;
+    margin:1%;
+    left:0;
+    right:0;
+    border-bottom: 1px black solid;
+}
+
+#topLogin{
+    position: fixed;
+    left: 35%;
+    top: 30%;
+    float: none;
+    width: 30%;
+    display: block;
+    margin: 1%;
+
+}
+
+
+
+header{
+    position: relative;
+    float: left;
+    border-collapse: collapse;
+    border: 1px black solid;
+    background-color: #ffffff;
+    padding: 5px;
+    
+}
+
+header.login{
+    position: relative;
+    border-collapse: collapse;
+    padding: 0px;
+    border: none;
+    background: none;
+    float: none;
+}
+
+nav {
+    position: relative;
+    float:left;
+    border-collapse: collapse;
+    border-color: #155274;
+    background-color: #ffffff;
+    padding: 5px;
+    
+}
+
+
+/*h1 ul
+h4{
+
+}*/
+
+#top h4{
+   float:left;
+   border-collapse: collapse;
+   border-color: #155274;
+   background-color: #ffffff;
+   padding: 5px;
+   height: 1%;
+   margin: 0px;
+   
+}
+
+
+#log{
+    padding: 5px;
+    height: 1%;
+    position: relative;
+    float:right;
+    background-color: #ffffff;
+    
+}
+
+/*barra laterale*/
+#leftbar{
+    width: 170px;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 20%;
+    
+}
+
+
+/*inizio area gestione campi di input vari tipi*/
+input[type="text"], input[type="password"], input[type="date"]{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-image-source: none;
+    width: 100%;
+}
+.inp{
+    margin-top: 10px;
+}
+
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    width: 100%;
+}
+
+/*fine area gestione campi di input vari tipi*/
+#topLogin h1{
+    text-align: center;
+}
+h1 span:before {
+    content: url("img/icona30x30px.png");
 
 }

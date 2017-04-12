@@ -11,33 +11,36 @@
     </head>    
     
     <body>
-        <header>
-            <div id="Title">
-                <h1>Login - NerdBook</h1>  
-            </div> 
-        </header>
-
-        <nav>
-            <ul>
-                <li><a href="descrizione.html"> descrizione </a></li>
-                <li><a href="profilo.html"> profilo </a></li>
-                <li><a href="bacheca.html"> bacheca </a></li>
-            </ul>
-        </nav>
-        <!-- ok Create una sezione di navigazione che permetta di raggiungere la pagina descrizione.html,
-profilo.html e bacheca.html-->
+        <div id="topLogin">
+            <header class="login">
+                <div id="Title">
+                    <h1><span>NerdBook</span></h1>  
+                </div> 
+            </header>
+        </div>
         
-        <div id="divBody">
-            <div id="formLogin">
+        <div id="LoginBody">
+            <div id="Logincontenent">
                 <form action="Profilo.html" method="get">  <!-- da CORREGGEREEEEEEEEEEE -->
-                    <label for="username">User Name: </label>
+                    
+                    <div class="inp">
+                        <label for="username">User Name: </label>
                         <input type="text" name="username" id="username" value="inserisci qui l'username" />
-                    <label for="pswd">Password: </label>
+                    </div>
+                    <div class="inp">
+                        <label for="pswd"> Password: </label>
                         <input type="password" name="pswd" id="pswd" value="oscurato" />
-                    <button type="submit">Login</button>
+                    </div>
+                    <div class="inp">
+                        <button type="submit">Login</button>
+                    </div>
+
+
+
                 </form>
             </div>
         </div>
+        
     </body>
         <!-- Inserire all’interno della pagina di login.html un form per richiedere username e password
 all’utente, utilizzando i campi di input corretti.-->
