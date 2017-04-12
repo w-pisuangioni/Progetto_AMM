@@ -25,11 +25,11 @@ Proprietà dei titoli da <h1> <h2> <h3>
 proprietà dei link 
 ************************/
 body{
-    position: static;
+    /*position: static;*/
     background-color: #e4e4e4;
     font: 17px/25px "Georgia" ,Times New Roman, Times, serif;
     height: auto;
-
+    margin: 0px;
 }
 
 il{
@@ -39,37 +39,43 @@ il{
 h1{
     margin: 0px; /*Esaminato con inspector*/
     color: #155276;
-    font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+    font: 20px/35px "Georgia" ,Times New Roman, Times, serif;
     font-weight: bold;
 }
 
 h2{
     margin-top: 0px; /*Esaminato con inspector*/
     color: #155274;
-    font: 25px/40px "Georgia" ,Times New Roman, Times, serif;
+    font: 15px/30px "Georgia" ,Times New Roman, Times, serif;
     font-weight: bold;
 }
 
-a{ font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+h3{
+    margin-top: 0px; /*Esaminato con inspector*/
+    color: #155274;
+    font: 10px/20px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+a{ font: 20px/35px "Georgia" ,Times New Roman, Times, serif;
     
 }
 
 a:link{
-   
+    
     text-decoration: none;
-    color: #A0C952;
-    /*font-weight: bold;*/
+    color: white;
+    font-weight: bold;
 }
 
 a:visited{
-    font: 35px/40px "Georgia" ,Times New Roman, Times, serif;
+    color: white;
     text-decoration: none;
-    color: #A0C952;
     font-weight: bold;
 }
 
 a:hover{
-    background-color: red;
+    background-color: #3399ff;
     font-weight: bold;
 }
 
@@ -86,6 +92,7 @@ nav ul, nav li{
 }
 nav li {
        border-right: 1px black solid;
+       text-align: center;
 }
 
 
@@ -102,18 +109,24 @@ header nav{
     margin-bottom: 5px;
 }
 
+/*contenuto centrale divbody e barra laterale*/
+#central{
+    margin-top: 7%;
+    margin-left: 6%;
+    margin-right: 5% ;
+    width: 90%;
+
+}
+
 #divBody{
-    background: white;
-    width: 70%;
-    border-color: black;
-    border-width: 10px;
-    /*margin-top: 100px;*/
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    width: 90%;
+    height: 100%;
+    margin-left: 16%;
+    margin-right: 0%;
+    padding-bottom: 42%;
    /* box-shadow: 0 0 10px rgba(0,0,0,.2);*/
 }
+
 
 #LoginBody{
     position: absolute;
@@ -136,13 +149,37 @@ header nav{
        width: 90%;
 }
 
+/*barra laterale*/
+#leftbar{
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    padding-bottom: 100%;
+    font-size: 20px;
+    margin-top: 0%;
+    margin-left: 0%;
+    background-color: white;
+    border: 1px black solid;
+
+}
+#leftbar strong:after {
+    content: '\A\ ';
+    white-space: pre;
+
+}
+/* regole scritte sotto per inserimento icone decorative
+#persone e #gruppi span:before{
+}
+*/
+
 /* GRANDE*/
 @media only screen and (min-width: 1024px){
 
 }
 
 /*MEDIO*/
-@media only screen and (max-width: 1024px) and (min-width: 480px){
+@media only screen and (max-width: 1023px) and (min-width: 481px){
 
 
 }
@@ -156,14 +193,18 @@ header nav{
 
 #top {
     position: fixed;
+    top:0%;
+    right:5%;
+    left:5%;
+    height: 50px;
+    width: 90%;
     float:none;
-    background-color: black;
-    width: 98%;
+    background-color: #3399ff ;
+    width: 90%;
     display: block;
     margin:1%;
-    left:0;
-    right:0;
     border-bottom: 1px black solid;
+    
 }
 
 #topLogin{
@@ -177,48 +218,49 @@ header nav{
 
 }
 
-
-
 header{
     position: relative;
     float: left;
-    border-collapse: collapse;
-    border: 1px black solid;
-    background-color: #ffffff;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-top: 1px black solid;
+    width: 15%;
     padding: 5px;
+    padding-bottom: 4px;
+    text-align: center;
     
 }
 
 header.login{
+    width: 100%;
     position: relative;
     border-collapse: collapse;
     padding: 0px;
     border: none;
     background: none;
     float: none;
+    text-align:center;
 }
 
 nav {
     position: relative;
     float:left;
     border-collapse: collapse;
-    border-color: #155274;
-    background-color: #ffffff;
-    padding: 5px;
+   
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-right: 10px;
+    
     
 }
 
-
-/*h1 ul
-h4{
-
-}*/
+/*h1 ul h4*/
 
 #top h4{
    float:left;
    border-collapse: collapse;
    border-color: #155274;
-   background-color: #ffffff;
+   
    padding: 5px;
    height: 1%;
    margin: 0px;
@@ -231,20 +273,14 @@ h4{
     height: 1%;
     position: relative;
     float:right;
-    background-color: #ffffff;
+    
     
 }
 
-/*barra laterale*/
-#leftbar{
-    width: 170px;
-    height: 100%;
-    float: left;
-    padding: 5px;
-    font-size: 15px;
-    margin-left: 20%;
+
+
     
-}
+
 
 
 /*inizio area gestione campi di input vari tipi*/
@@ -254,6 +290,7 @@ input[type="text"], input[type="password"], input[type="date"]{
     border-image-source: none;
     width: 100%;
 }
+
 .inp{
     margin-top: 10px;
 }
@@ -277,7 +314,33 @@ button {
 #topLogin h1{
     text-align: center;
 }
-h1 span:before {
-    content: url("img/icona30x30px.png");
 
+/*immagini decorative da css*/
+/* immagine decorativa per header pagina login */
+#topLogin h1 span:before {
+       content: url("img/icona30x30px.png");
+
+}
+
+
+/* immagine login */
+#log :before{
+    content: url("img/profilo_def_litle.png");
+}
+/*immagine decorativa per utenti barra laterale*/
+#Persone span:before{
+    content: url("img/profilo_def_litle.png");
+}
+#Persone span:after{
+    content: '\A\ ';
+    white-space: pre;
+}
+/*immagine decorativa per gruppi barra laterale*/
+
+#Gruppi span:before{
+    content: url("img/gruppi.png")
+}
+#Gruppi span:after{
+    content: '\A\ ';
+    white-space: pre;
 }
