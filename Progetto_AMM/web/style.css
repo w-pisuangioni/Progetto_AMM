@@ -1,0 +1,464 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-mar-2017, 11.49.38
+    Author     : pisuw
+*/
+
+/* ++++++++++++++++++++++++++++++++++++
+++++++++++++ tesk 4 +++++++++++++++++++
+regole per:
+***************bacheca*****************
+LIBERTà COLORI E FONT 
+inserire le immagini decorative tramite css
+NON CONSIDERARE IL FORM DI RICERCA NE QUELLO
+PER L'INSERIMENTO DI UN NUOVO POST PER IL MOMENTO'
+++++++++++++++++++++++++++++++++++++++++*/ 
+
+/****** inizio *********
+inserimento colore sfondo
+colore e font per <il> del testo
+Proprietà dei titoli da <h1> <h2> <h3>
+proprietà dei link 
+************************/
+body{
+    /*position: static;*/
+    background-color: #e4e4e4;
+    font: 17px/25px "Georgia" ,Times New Roman, Times, serif;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+il{
+    font: 10px/17px "Georgia" ,Times New Roman, Times, serif;
+}
+
+h1{
+    margin: 0px; /*Esaminato con inspector*/
+    color: #155276;
+    font: 20px/35px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+h2{
+    margin-top: 0px; /*Esaminato con inspector*/
+    color: #155274;
+    font: 15px/30px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+h3{
+    margin-top: 0px; /*Esaminato con inspector*/
+    color: #155274;
+    font: 20px "Georgia" ,Times New Roman, Times, serif;
+    font-weight: bold;
+}
+
+a{ font: 20px/35px "Georgia" ,Times New Roman, Times, serif;
+    
+}
+
+a:link{
+    
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    background-color: #3399ff;
+    font-weight: bold;
+}
+
+
+nav ul, nav li{
+
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+ 
+    border-collapse:collapse;
+ 
+}
+nav li {
+       border-right: 1px black solid;
+       text-align: center;
+}
+
+
+nav li.active{
+    background: #155276;
+    text-decoration: #0055FF;
+}
+/***** fine  colori ecc.(task3)*****/
+
+header nav{
+    font: 35px/50px "Comic Sans MS", Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/*contenuto centrale divbody e barra laterale*/
+#central{
+    margin-top: 7%;
+    margin-left: 6%;
+    margin-right: 5% ;
+    width: 90%;
+
+}
+
+#divBody{
+    width: 90%;
+    height: 100%;
+    margin-left: 16%;
+    margin-right: 0%;
+    padding-bottom: 42%;
+   /* box-shadow: 0 0 10px rgba(0,0,0,.2);*/
+}
+
+
+#LoginBody{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    background: white;
+    width: 30%;
+    margin: 5px;
+    border: 1px black solid;
+    display: block;
+    float: none;
+    padding: 1%;
+}
+
+#Logincontenent{
+       left: 5%;
+       right: 5%;
+       padding-bottom: 5px;
+       position: relative;
+       width: 90%;
+}
+
+
+
+#top {
+    position: fixed;
+    top:0%;
+    right:5%;
+    left:5%;
+    height: 50px;
+    width: 90%;
+    float:none;
+    background-color: #3399ff ;
+    width: 90%;
+    display: block;
+    margin:1%;
+    border-bottom: 1px black solid;
+    
+}
+
+#topLogin{
+    position: fixed;
+    left: 35%;
+    top: 30%;
+    float: none;
+    width: 30%;
+    display: block;
+    margin: 1%;
+
+}
+
+header{
+    position: relative;
+    float: left;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-top: 1px black solid;
+    width: 15%;
+    padding: 5px;
+    padding-bottom: 4px;
+    text-align: center;
+    
+}
+
+header.login{
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+    padding: 0px;
+    border: none;
+    background: none;
+    float: none;
+    text-align:center;
+}
+
+nav {
+    position: relative;
+    float:left;
+    border-collapse: collapse;
+   
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-right: 10px;
+    
+    
+}
+
+/*h1 ul h4*/
+
+#top h4{
+   float:left;
+   border-collapse: collapse;
+   border-color: #155274;
+   
+   padding: 5px;
+   height: 1%;
+   margin: 0px;
+   
+}
+
+
+#log{
+    padding: 5px;
+    height: 1%;
+    position: relative;
+    float:right;
+    
+    
+}
+
+#topLogin h1{
+    font-size: 35px;
+}
+
+/*inizio area gestione campi di input vari tipi*/
+input[type="text"], input[type="password"], input[type="date"]{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-image-source: none;
+    width: 100%;
+}
+
+.inp{
+    margin-top: 10px;
+}
+
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    width: 100%;
+}
+
+/*fine area gestione campi di input vari tipi*/
+
+    #post{
+        margin:2%;
+        background: #82baf2;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    .post {
+        width:90%;
+        background: #82baf2;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 5%; 
+    }
+ 
+    #container_profilo{
+        margin:5%;
+        background: #82baf2;
+        box-shadow: 0 0 10px rgba(0,0,0,.2); 
+    }
+    
+    #imgprofilobig{
+       margin:5%;
+       box-shadow: 0 0 10px rgba(0,0,0,.2);  
+       
+   }
+    
+/* GRANDE*/
+@media only screen and (min-width: 1024px){
+#container_profilo h1 span :before {
+       content: url("img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg");
+       
+}
+
+
+
+#container_profilo #formProfilo{
+    margin: 5%;
+    margin-left: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/*barra laterale*/
+#leftbar{
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    padding-bottom: 100%;
+    font-size: 20px;
+    margin-top: 0%;
+    margin-left: 0%;
+    background-color: white;
+    border: 1px black solid;
+
+}
+#leftbar strong:after {
+    content: '\A\ ';
+    white-space: pre;
+
+}
+/* regole scritte sotto per inserimento icone decorative
+#persone e #gruppi span:before{
+}
+*/
+
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.faq{
+    width:90%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    margin: 5%;
+}
+.faq h3{
+        box-shadow: 0 0 10px rgba(0,0,1,.1);
+        margin:1%;
+    }
+
+   
+}
+
+/*MEDIO*/
+@media only screen and (max-width: 1023px) and (min-width: 481px){
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+    #leftbar{
+        display: none;
+    }
+    .faq{
+        width: 90%;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 5%;
+    }
+    .faq h3{
+         box-shadow: 0 0 10px rgba(0,0,1,.1);
+         margin:1%
+    }
+    #divBody{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+/*PICCOLO*/
+
+
+@media only screen and (max-width: 480px){
+#sommario,#faq{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#divBody h1{
+    margin:2%;
+    background: #82baf2;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+    #leftbar{
+        display: none;
+    }
+    .faq{
+        width: 94%;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        margin: 3%;
+    }
+    .faq h3{
+         box-shadow: 0 0 10px rgba(0,0,1,.1);
+         margin:1%
+    }
+    #divBody{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+
+/*++++++++ Area Immagini Decorative inserite tramite css +++++++++*/
+/*immagini decorative da css*/
+/* immagine decorativa per header pagina login */
+#topLogin h1 span:before {
+       content: url("img/icona30x30px.png");
+
+}
+
+
+/* immagine login */
+#log :before{
+    content: url("img/profilo_def_litle.png");
+}
+@media only screen and (min-width: 1023px){
+/*immagine decorativa per utenti barra laterale*/
+#Persone span:before{
+    content: url("img/profilo_def_litle.png");
+}
+#Persone span:after{
+    content: '\A\ ';
+    white-space: pre;
+}
+/*immagine decorativa per gruppi barra laterale*/
+
+#Gruppi span:before{
+    content: url("img/gruppi.png")
+}
+#Gruppi span:after{
+    content: '\A\ ';
+    white-space: pre;
+}
+}
+/*+++++++ Fine Area Immagini Decorative inserite tramite css +++++++*/

@@ -25,7 +25,7 @@ public class Utenti_RegistratiFactory {
         return singleton;
     }
 
-    private ArrayList<Utenti_Registrati> listaGatti = new ArrayList<Utenti_Registrati>();
+    private ArrayList<Utenti_Registrati> listaUtenti_Registrati = new ArrayList<Utenti_Registrati>();
 
     private Utenti_RegistratiFactory() {
         //Creazione utenti
@@ -83,7 +83,7 @@ public class Utenti_RegistratiFactory {
     
     public int getIdByUserAndPassword(String user, String password){
         for(Utenti_Registrati user : this.listaUtenti_Registrati){
-            if(user.getNome().equals(user) && gatto.getPassword().equals(password)){
+            if(user.getNome().equals(user) && user.getPassword().equals(password)){
                 return user.getId();
             }
         }
