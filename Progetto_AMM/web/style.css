@@ -395,8 +395,6 @@ button {
 }
 
 /*PICCOLO*/
-
-
 @media only screen and (max-width: 480px){
 #sommario,#faq{
     margin:2%;

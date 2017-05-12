@@ -4,9 +4,17 @@
         <servlet-name>PostFactory</servlet-name>
         <servlet-class>NerdBook_package.PostFactory</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>NerdBook.srv.Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PostFactory</servlet-name>
         <url-pattern>/PostFactory</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login.html</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
