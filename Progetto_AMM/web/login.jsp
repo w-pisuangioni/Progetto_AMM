@@ -1,6 +1,12 @@
+<%-- 
+    Document   : login
+    Created on : 12-mag-2017, 22.23.25
+    Author     : pisuw
+--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    
+<html>       
     <head>
         <title>NerdBook - Login </title>
         <meta charset="UTF-8">
@@ -10,7 +16,11 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>    
     
+    
     <body>
+        <c:set var="title" value="Login" scope="request"/>
+ 
+        
         <div id="topLogin">
             <header class="loginold">
                 <div id="Title">
@@ -21,6 +31,9 @@
         
         <div id="LoginBody">
             <div id="Logincontenent">
+                <c:if test="${invalidData == true}">
+                    <div id="invalidDataWarning">I dati inseriti non sono corretti</div>
+                </c:if>
                 <form action="Profilo.html" method="get">  <!-- da CORREGGEREEEEEEEEEEE -->
                     
                     <div class="inp">
@@ -40,11 +53,5 @@
                 </form>
             </div>
         </div>
-        
     </body>
-        <!-- Inserire all’interno della pagina di login.html un form per richiedere username e password
-all’utente, utilizzando i campi di input corretti.-->
-        
-        
-    
 </html>
