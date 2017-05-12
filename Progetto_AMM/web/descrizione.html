@@ -11,26 +11,8 @@
     </head>
     
     <body>
-        <div id="top">
-            <header>
-                <div id="Title">
-                    <h1>NerdBook</h1>  
-                </div> 
-            </header>
-            <nav> <!-- Barra di navigazione  -->  
-                <ul>
-                    <li ><a href="profilo.html"> Profilo </a></li>
-                    <li ><a href="bacheca.html"> Bacheca </a></li>
-                    <li class="active"><a href="descrizione.html"> Descrizione </a></li>
-                    <li ><a href="login.html"> Login </a></li>
-                </ul>
-            </nav>
-            <div id="log">
-                <h4>USER</h4>
-              <!--  img username 
-                      link log out -->
-            </div>
-        </div>
+        <c:set var="title"/>
+        <jsp:include page="top.jsp"/>
         
         <div id="central">
             

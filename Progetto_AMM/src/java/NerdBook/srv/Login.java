@@ -72,7 +72,7 @@ public class Login extends HttpServlet {
             if (username != null &&
                 password != null) 
             {
-                int loggedUserID = GattoFactory.getInstance().getIdByUserAndPassword(username, password);
+                int loggedUserID = Utenti_RegistratiFactory.getInstance().getIdByUserAndPassword(username, password);
                 
                 //se l'utente è valido...
                 if(loggedUserID!=-1)
