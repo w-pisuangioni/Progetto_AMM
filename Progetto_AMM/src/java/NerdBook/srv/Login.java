@@ -5,6 +5,7 @@
  */
 package NerdBook.srv;
 
+import NerdBook_package.Utenti_RegistratiFactory;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -36,8 +37,7 @@ public class Login extends HttpServlet {
         HttpSession session = request.getSession();
         
         //Se è impostato il parametro GET logout, distrugge la sessione
-        if(request.getParameter("logout")!=null)
-        {
+        if(request.getParameter("logout")!=null){
             session.invalidate();
             request.getRequestDispatcher("login.jsp").forward(request, response);
             return;
@@ -61,7 +61,7 @@ public class Login extends HttpServlet {
             Nelle slide viste a lezione è presente una versione leggermente 
             differente che utilizza un metodo this.login il quale restituisce 
             true se la coppia user/pass è valida, false altrimenti.
-            L'implementazione di GaTeender prevede che se sono presenti
+            L'implementazione prevede che se sono presenti
             i parametri post username e password (inviati dal loginForm.jsp)
             allora verifica che questa coppia corrisponda a un gatto registrato 
             (id!=-1) e in caso positivo imposta :
@@ -86,11 +86,9 @@ public class Login extends HttpServlet {
                     
                     //ritorno al form del login informandolo che i dati non sono validi
                     request.setAttribute("invalidData", true);
-                    request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
                     return;
-                }
-                
-                
+                } 
             }
         }
         
@@ -116,7 +114,7 @@ public class Login extends HttpServlet {
             out.println("</body>");
             out.println("</html>");*/
         }
-    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -127,7 +125,7 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
+   @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -142,16 +140,16 @@ public class Login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
     /**
      * Returns a short description of the servlet.
-     *
      * @return a String containing servlet description
      */
+
     @Override
     public String getServletInfo() {
         return "Short description";

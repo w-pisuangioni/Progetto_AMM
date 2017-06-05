@@ -3,7 +3,7 @@
     Created on : 12-mag-2017, 22.23.25
     Author     : pisuw
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>       
@@ -15,7 +15,6 @@
         <meta name="keywords" content="NerdBook, login">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>    
-    
     
     <body>
         <c:set var="title" value="Login" scope="request"/>
@@ -34,15 +33,15 @@
                 <c:if test="${invalidData == true}">
                     <div id="invalidDataWarning">I dati inseriti non sono corretti</div>
                 </c:if>
-                <form action="Profilo.html" method="get">  <!-- da CORREGGEREEEEEEEEEEE -->
+                <form action="login.html" method="post">  
                     
                     <div class="inp">
                         <label for="username">User Name: </label>
                         <input type="text" name="username" id="username" value="inserisci qui l'username" />
                     </div>
                     <div class="inp">
-                        <label for="pswd"> Password: </label>
-                        <input type="password" name="pswd" id="pswd" value="oscurato" />
+                        <label for="password"> Password: </label>
+                        <input type="password" name="password" id="password" value="oscurato" />
                     </div>
                     <div class="inp">
                         <button type="submit">Login</button>

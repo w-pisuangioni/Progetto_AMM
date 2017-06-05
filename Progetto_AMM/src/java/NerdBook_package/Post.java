@@ -20,7 +20,7 @@ public class Post {
     };
 
     protected int id;
-    protected Utenti_registrati user;
+    protected Utenti_Registrati user;
     private String content;
     private Type postType;
 
@@ -48,14 +48,14 @@ public class Post {
     /**
      * @return the user
      */
-    public Utenti_registrati getUser() {
+    public Utenti_Registrati getUser() {
         return user;
     }
 
     /**
      * @param user the user to set
      */
-    public void setUser(Utenti_registrati user) {
+    public void setUser(Utenti_Registrati user) {
         this.user = user;
     }
 

@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package NerdBook_package;
-
-/*import NerdBook_package.Utenti_registrati;*/
-
+/*
+import NerdBook_package.Utenti_Registrati;
+import NerdBook_package.Utenti_RegistratiFactory;    */
 import java.util.ArrayList;
 
 /**
@@ -81,9 +81,9 @@ public class Utenti_RegistratiFactory {
         return null;
     }
     
-    public int getIdByUserAndPassword(String user, String password){
+    public int getIdByUserAndPassword(String username, String password){
         for(Utenti_Registrati user : this.listaUtenti_Registrati){
-            if(user.getNome().equals(user) && user.getPassword().equals(password)){
+            if(user.getEmail().equals(username) && user.getPassword().equals(password)){
                 return user.getId();
             }
         }

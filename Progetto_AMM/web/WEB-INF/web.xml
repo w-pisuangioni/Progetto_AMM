@@ -8,6 +8,18 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>NerdBook.srv.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>bacheca</servlet-name>
+        <servlet-class>NerdBook.srv.Bacheca</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Profilo</servlet-name>
+        <servlet-class>NerdBook.srv.Profilo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>descrizione</servlet-name>
+        <servlet-class>NerdBook.srv.Descrizione</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PostFactory</servlet-name>
         <url-pattern>/PostFactory</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bacheca</servlet-name>
+        <url-pattern>/bacheca.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profilo</servlet-name>
+        <url-pattern>/Profilo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>descrizione</servlet-name>
+        <url-pattern>/descrizione</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
