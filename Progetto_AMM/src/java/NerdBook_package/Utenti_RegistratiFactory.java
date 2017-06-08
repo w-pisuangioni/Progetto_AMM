@@ -13,6 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -141,7 +142,7 @@ public class Utenti_RegistratiFactory {
             
             String query = 
                       "select id from utenti "
-                    + "where name = ? and password = ?";
+                    + "where nome = ? and password = ?";
             
             // Prepared Statement
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -170,4 +171,88 @@ public class Utenti_RegistratiFactory {
         return -1;
     }
        
+    public List getUtentiList() {
+        List<Utenti_Registrati> lista_utenti = new ArrayList<Utenti_Registrati>();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from utenti";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            while (res.next()) {
+                Utenti_Registrati current = new Utenti_Registrati();
+                current.setId(res.getInt("id"));
+                current.setNome(res.getString("nome"));
+                current.setCognome(res.getString("cognome"));
+                current.setData(res.getString("data_nascita"));
+                current.setPresentazione(res.getString("presentazione"));
+                current.setImg(res.getString("img"));
+                current.setMail(res.getString("email"));
+                current.setPassword(res.getString("password"));
+                
+                lista_utenti.add(current);
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return lista_utenti;
+    }
+    
+    public List getUtentiList(String nome) {
+        List<Utenti_Registrati> listaGatti = new ArrayList<Utenti_Registrati>();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from utenti where nome like ?";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Si associano i valori
+            stmt.setString(1, "%" + nome + "%");
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            while (res.next()) {
+                Utenti_Registrati current = new Utenti_Registrati();
+                current.setId(res.getInt("id"));
+                current.setNome(res.getString("nome"));
+                current.setCognome(res.getString("cognome"));
+                current.setData(res.getString("data_nascita"));
+                current.setPresentazione(res.getString("presentazione"));
+                current.setImg(res.getString("img"));
+                current.setMail(res.getString("email"));
+                current.setPassword(res.getString("password"));
+                
+                listaGatti.add(current);
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return listaGatti;
+    }
+    
+    
 }

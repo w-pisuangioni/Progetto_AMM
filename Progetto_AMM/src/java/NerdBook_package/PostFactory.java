@@ -41,7 +41,8 @@ public class PostFactory {
     }
     
     /* FINE GESTIONE DATABASE */
-    
+    private PostFactory(){}
+
         public Post getPostById(int id) {        
         Utenti_RegistratiFactory utenteFactory = Utenti_RegistratiFactory.getInstance();
         
@@ -94,6 +95,116 @@ public class PostFactory {
         
     }
 
+        public Post getPostByIdGroup(int id) {        
+        GruppiFactory gruppoFactory = GruppiFactory.getInstance();
+        Utenti_RegistratiFactory utenteFactory = Utenti_RegistratiFactory.getInstance();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from posts "
+                    + "join tipipost on posts.tipo_post = tipipost.id "
+                    + "where id_gruppo = ?";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Si associano i valori
+            stmt.setInt(1, id);
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            if (res.next()) {
+                Post current = new Post();
+                //imposto id del post
+                current.setId(res.getInt("id"));
+                
+                //impost il contenuto del post
+                current.setContenuto(res.getString("contenuto"));
+                
+                //imposto il tipo del post
+                current.setTipoPost(this.postTypeFromString(res.getString("tipoPost")));
+                
+                //imposto l'autore del post
+                Utenti_Registrati autore = utenteFactory.getUtenti_RegistratiById(res.getInt("id_utente"));
+                current.setId_utente(autore);
+                
+                //imposto il gruppo del post
+                Gruppi gruppo = gruppoFactory.getGruppoByid(res.getInt("id_gruppo"));
+                current.setId_gruppo(gruppo);
+               
+                stmt.close();
+                conn.close();
+                return current;
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+        
+    } 
+        
+        public Post getPostByIdUser(int id) {        
+        Utenti_RegistratiFactory utenteFactory = Utenti_RegistratiFactory.getInstance();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from posts "
+                    + "join tipipost on posts.tipo_post = tipipost.id "
+                    + "where id_utente = ? and id_gruppo = 0";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Si associano i valori
+            stmt.setInt(1, id);
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            if (res.next()) {
+                Post current = new Post();
+                //imposto id del post
+                current.setId(res.getInt("id"));
+                
+                //impost il contenuto del post
+                current.setContenuto(res.getString("contenuto"));
+                
+                //imposto il tipo del post
+                current.setTipoPost(this.postTypeFromString(res.getString("tipoPost")));
+                
+                //imposto l'autore del post
+                Utenti_Registrati autore = utenteFactory.getUtenti_RegistratiById(res.getInt("id_utente"));
+                
+                current.setId_utente(autore);
+               
+                stmt.close();
+                conn.close();
+                return current;
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+        
+    }
+
+        
+        
     public List getPostList(Utenti_Registrati utente) {
         List<Post> listaPost = new ArrayList<Post>();
         
