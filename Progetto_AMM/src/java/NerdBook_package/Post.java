@@ -16,19 +16,21 @@ public class Post {
     
     
     public enum Type {
-        TEXT, IMAGE
+        TEXT, IMAGE, LINK 
     };
 
     protected int id;
-    protected Utenti_Registrati user;
-    private String content;
-    private Type postType;
+    protected Utenti_Registrati id_utente;
+    protected Gruppi id_gruppo;
+    private String contenuto;
+    private Type tipoPost;
 
     public Post() {
         id = 0;
-        user = null;
-        content = "";
-        postType = Type.TEXT;
+        id_utente = null;
+        id_gruppo = null;
+        contenuto = "";
+        tipoPost = Type.TEXT;
     }
 
     /**
@@ -46,46 +48,61 @@ public class Post {
     }
 
     /**
-     * @return the user
+     * @return the id_utente
      */
-    public Utenti_Registrati getUser() {
-        return user;
+    public Utenti_Registrati getId_utente() {
+        return id_utente;
     }
 
     /**
-     * @param user the user to set
+     * @param id_utente the id_utente to set
      */
-    public void setUser(Utenti_Registrati user) {
-        this.user = user;
+    public void setId_utente(Utenti_Registrati id_utente) {
+        this.id_utente = id_utente;
     }
 
     /**
-     * @return the content
+     * @return the id_gruppo
      */
-    public String getContent() {
-        return content;
+    public Gruppi getId_gruppo() {
+        return id_gruppo;
     }
 
     /**
-     * @param content the content to set
+     * @param id_gruppo the id_gruppo to set
      */
-    public void setContent(String content) {
-        this.content = content;
+    public void setId_gruppo(Gruppi id_gruppo) {
+        this.id_gruppo = id_gruppo;
     }
 
     /**
-     * @return the postType
+     * @return the contenuto
      */
-    public Type getPostType() {
-        return postType;
+    public String getContenuto() {
+        return contenuto;
     }
 
     /**
-     * @param postType the postType to set
+     * @param contenuto the contenuto to set
      */
-    public void setPostType(Type postType) {
-        this.postType = postType;
+    public void setContenuto(String contenuto) {
+        this.contenuto = contenuto;
     }
+
+    /**
+     * @return the tipoPost
+     */
+    public Type getTipoPost() {
+        return tipoPost;
+    }
+
+    /**
+     * @param tipoPost the tipoPost to set
+     */
+    public void setTipoPost(Type tipoPost) {
+        this.tipoPost = tipoPost;
+    }
+
     
     
 }

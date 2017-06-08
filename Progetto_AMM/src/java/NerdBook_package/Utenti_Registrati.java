@@ -17,10 +17,10 @@ public class Utenti_Registrati {
     private String nome;
     private String cognome;
     private String email;
-    private String data;
+    private String data_nascita;
     private String password;
-    private String urlFotoProfilo;
-    private String Stato; /* Frase di presentazione */
+    private String img;
+    private String presentazione; /* Frase di presentazione */
 
     public Utenti_Registrati() {
             id = 0;
@@ -74,30 +74,30 @@ public class Utenti_Registrati {
     }
 
         /**
-     * @return the data
+     * @return the data_nascita
      */
-    public String getdata() {
-        return data;
+    public String getData() {
+        return data_nascita;
     }
 
     /**
      * @param data the 
      */
-    public void setdata(String data) {
-        this.data = data;
+    public void setData(String data) {
+        this.data_nascita = data;
     }
     
     /**
      * @return the email
      */
-    public String getEmail() {
+    public String getMail() {
         return email;
     }
 
     /**
      * @param email the email to set
      */
-    public void setEmail(String email) {
+    public void setMail(String email) {
         this.email = email;
     }
 
@@ -115,26 +115,40 @@ public class Utenti_Registrati {
         this.password = password;
     }
     
+
+
+    /**
+     * @return the img
+     */
+    public String getImg() {
+        return img;
+    }
+
+    /**
+     * @param img the img to set
+     */
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    /**
+     * @return the presentazione
+     */
+    public String getPresentazione() {
+        return presentazione;
+    }
+
+    /**
+     * @param presentazione the presentazione to set
+     */
+    public void setPresentazione(String presentazione) {
+        this.presentazione = presentazione;
+    }
+    
     @Override
     public boolean equals(Object altroUtenti_registrati) {
         if (altroUtenti_registrati instanceof Utenti_Registrati)
             if (this.getId() == ((Utenti_Registrati)altroUtenti_registrati).getId()) return true;
         return false;
     }
-
-    /**
-     * @return the urlFotoProfilo
-     */
-    public String getUrlFotoProfilo() {
-        return urlFotoProfilo;
-    }
-
-    /**
-     * @param urlFotoProfilo the urlFotoProfilo to set
-     */
-    public void setUrlFotoProfilo(String urlFotoProfilo) {
-        this.urlFotoProfilo = urlFotoProfilo;
-    }
-    
-        
 }
