@@ -11,7 +11,6 @@ package NerdBook_package;
  */
 
 import NerdBook_package.Post;
-import NerdBook_package.Utenti_Registrati;
 
 
 public class Gruppi {
