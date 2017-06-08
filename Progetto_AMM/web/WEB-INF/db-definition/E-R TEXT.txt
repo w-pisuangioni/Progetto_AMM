@@ -1,0 +1,10 @@
+ENTITA':
+  Utenti:(id, nome, cognome, data, frase_di_presentazione, immagine, email, password)
+  Gruppi:(id, nome, creatore)
+  Post:(id,contenuto,id_utente, id_Gruppo, tipo_post)
+
+RELAZIONI:
+  Pubblica:(Utenti-Post:1-M)
+  Contenuto:(Gruppi-Post:1-M)
+  Membri:(Utenti-Gruppi:M-M; id_gruppo, id_utente)
+  Amicizie:(Utente-Utente; M-M; id_utente,id_amico)
