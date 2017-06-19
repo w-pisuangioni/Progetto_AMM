@@ -27,7 +27,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
-        <url-pattern>/Login.html</url-pattern>
+        <url-pattern>/login.html</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>bacheca</servlet-name>
@@ -35,7 +35,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Profilo</servlet-name>
-        <url-pattern>/Profilo</url-pattern>
+        <url-pattern>/profilo.html</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>descrizione</servlet-name>

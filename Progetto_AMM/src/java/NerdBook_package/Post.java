@@ -10,8 +10,6 @@ package NerdBook_package;
  * @author pisuw
  */
 
-
-
 public class Post {
     
     

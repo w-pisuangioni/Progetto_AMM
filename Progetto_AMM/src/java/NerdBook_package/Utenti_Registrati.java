@@ -11,6 +11,10 @@ package NerdBook_package;
  */
 public class Utenti_Registrati {
     
+        public enum Tipo_utenti {
+        AMMINISTRATORE,UTENTE
+    };
+    
     private int id;
     private String nome;
     private String cognome;

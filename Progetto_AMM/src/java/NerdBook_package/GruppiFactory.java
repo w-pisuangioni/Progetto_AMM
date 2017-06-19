@@ -10,6 +10,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -80,9 +82,41 @@ public Gruppi getGruppoByid(int id){
     
 }
 
+   public List getGruppiList() {
+        List<Gruppi> lista_gruppi = new ArrayList<Gruppi>();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from gruppi";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
 
+            // ciclo sulle righe restituite
+            while (res.next()) {
+                Gruppi current = new Gruppi();
+                current.setId(res.getInt("id"));
+                current.setNome(res.getString("nome"));
+                current.setCreatore(res.getInt("creatore"));
+                lista_gruppi.add(current);
+            }
 
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return lista_gruppi;
+    }
 
+/*gestione tabella membri gruppi */
 }
 
 

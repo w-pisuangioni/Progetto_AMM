@@ -286,8 +286,7 @@ public class PostFactory {
         
         if(type.equals("IMAGE"))
             return Post.Type.IMAGE;
-        else 
-            if(type.equals("LINK"))
+        else if(type.equals("LINK"))
                return Post.Type.LINK;
             else
                return Post.Type.TEXT;

@@ -20,7 +20,7 @@
     <body>
         <c:set var="title"/>
         <jsp:include page="top.jsp"/>
-
+        <jsp:include page="cercaAmici.jsp"/> 
         <div id="central">
             
             <div id="leftbar">

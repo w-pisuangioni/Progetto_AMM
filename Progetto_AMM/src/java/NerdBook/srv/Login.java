@@ -73,7 +73,7 @@ public class Login extends HttpServlet {
         if (session.getAttribute("loggedIn") != null &&
             session.getAttribute("loggedIn").equals(true)) {
 
-            request.getRequestDispatcher("Bacheca").forward(request, response);
+            request.getRequestDispatcher("bacheca.html").forward(request, response);
             return;
         
         //Se l'utente non è loggato...
@@ -105,7 +105,7 @@ public class Login extends HttpServlet {
                     session.setAttribute("loggedIn", true);
                     session.setAttribute("loggedUserID", loggedUserID);
                     
-                    request.getRequestDispatcher("Bacheca").forward(request, response);
+                    request.getRequestDispatcher("bacheca.html").forward(request, response);
                     return;
                 } else { //altrimenti se la coppia user/pass non è valida (id==-1)
                     

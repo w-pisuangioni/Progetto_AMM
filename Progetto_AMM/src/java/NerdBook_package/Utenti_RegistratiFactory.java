@@ -254,5 +254,33 @@ public class Utenti_RegistratiFactory {
         return listaGatti;
     }
     
+    /*gestione tipi utente*/
+
+    private Utenti_Registrati.Tipo_utenti utentiTypeFromString(String tipo){
+        
+        if(tipo.equals(""))
+            return Utenti_Registrati.Tipo_utenti.AMMINISTRATORE;
+        else
+            return Utenti_Registrati.Tipo_utenti.UTENTE;
+        
+    }
     
+    private int postTypeFromEnum(Utenti_Registrati.Tipo_utenti tipo){
+        if(null == tipo)
+            return 4;
+            else
+            //È realizzabile in modo più robusto rispetto all'hardcoding degli indici
+        switch (tipo) {
+            case AMMINISTRATORE:
+                return 1;
+            case UTENTE:
+                return 2;
+            default:
+                return 2;/*IN CASO DI ERRORE CONSIDERIAMO L'UTENTE DI TIPO UTENTE*/
+        }
+        
+    }
+
+
+
 }
