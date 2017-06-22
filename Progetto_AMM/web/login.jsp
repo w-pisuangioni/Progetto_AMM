@@ -37,11 +37,11 @@
                     
                     <div class="inp">
                         <label for="username">User Name: </label>
-                        <input type="text" name="username" id="username" value="inserisci qui l'username" />
+                        <input type="text" name="username" id="username" value="" />
                     </div>
                     <div class="inp">
                         <label for="password"> Password: </label>
-                        <input type="password" name="password" id="password" value="oscurato" />
+                        <input type="password" name="password" id="password" value="" />
                     </div>
                     <div class="inp">
                         <button type="submit">Login</button>
