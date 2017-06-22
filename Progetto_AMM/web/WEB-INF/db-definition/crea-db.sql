@@ -81,15 +81,15 @@ CREATE TABLE amicizie(
 INSERT INTO utenti(id, nome, cognome, img, mail, password, tipo_utente)
 VALUES(default,'Rufy', 'Monkey D.','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234',1);
 /* ----------------------------------------popolare gli altri campi---------------------------------------*/
-/*INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'Rufy', 'Monkey D.','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+INSERT INTO utenti(id, nome, cognome, img, mail, password)
+VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
  
 INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'Rufy', 'Monkey D.','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
  
 INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'Rufy', 'Monkey D.','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
-     */  
+VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+     
 /*Popolamento tabella tipoPost*/
 INSERT INTO tipiPost (id, nome)
 VALUES (default, 'TEXT');
