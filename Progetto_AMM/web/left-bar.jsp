@@ -13,16 +13,17 @@
     <body>
         <div id="leftbar">
             <p id="Persone">
-                <strong>Persone</strong> 
-                <span>Utente 1</span>
-                <span>Utente 2</span>
-                <span>Utente 3</span>
+                  <c:forEach items="${utenti}" var="utente" >
+                     <li>${utente.nome}</li>
+                  </c:forEach>
             </p>
             <p id="Gruppi">
                 <strong>Gruppi</strong> 
-                <span>Gruppo 1</span>
-                <span>Gruppo 2</span>
-                <span>Gruppo 3</span>
+                                
+                  <c:forEach items="${gruppi}" var="gruppo" >
+                     <li>${utente.nome}</li>
+                  </c:forEach>
+                
             </p>  
         </div>
     </body>

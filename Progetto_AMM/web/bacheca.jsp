@@ -23,9 +23,12 @@
         <jsp:include page="cercaAmici.jsp"/> 
         <div id="central">
             
+             <jsp:include page="left-bar.jsp"/> 
+           
+            <!--*
             <div id="leftbar">
               <!--<div class="Cerca">
-                </div> -->
+                </div> -- >
                 <p id="Persone">
                   <strong>Persone</strong> 
                 </p>
@@ -43,7 +46,7 @@
                   </c:forEach>
                 
             </div>
-
+   -->
             <div id="divBody">
                 <div id="post">
                     <h2> POST </h2>

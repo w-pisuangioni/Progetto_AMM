@@ -27,8 +27,8 @@ import javax.servlet.http.HttpSession;
 public class Login extends HttpServlet {
 
     private static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_CLEAN_PATH = "../../web/WEB-INF/ammdb";
-    private static final String DB_BUILD_PATH = "WEB-INF/ammdb";
+    private static final String DB_CLEAN_PATH = "../../web/WEB-INF/ammdb/ammdb";
+    private static final String DB_BUILD_PATH = "WEB-INF/ammdb/ammdb";
 
     @Override
     public void init() {
@@ -73,7 +73,7 @@ public class Login extends HttpServlet {
         if (session.getAttribute("loggedIn") != null &&
             session.getAttribute("loggedIn").equals(true)) {
 
-            request.getRequestDispatcher("bacheca.html").forward(request, response);
+            request.getRequestDispatcher("bacheca.jsp").forward(request, response);
             return;
         
         //Se l'utente non è loggato...
@@ -104,8 +104,8 @@ public class Login extends HttpServlet {
                 {
                     session.setAttribute("loggedIn", true);
                     session.setAttribute("loggedUserID", loggedUserID);
-                    
-                    request.getRequestDispatcher("bacheca.html").forward(request, response);
+                    /*gestire il caso in cui vada in profilo o in bacheca*/
+                    request.getRequestDispatcher("bacheca.jsp").forward(request, response);
                     return;
                 } else { //altrimenti se la coppia user/pass non è valida (id==-1)
                     
@@ -122,7 +122,7 @@ public class Login extends HttpServlet {
           tentativo di accesso diretto alla servlet Login -> reindirizzo verso 
           il form di login.
         */
-        request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
         /*------------------------------------------------------------------------------------------------------------
         ------------------------------------------------------------------------------------------------------------*/
         
