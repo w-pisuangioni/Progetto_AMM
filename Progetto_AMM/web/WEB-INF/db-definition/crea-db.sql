@@ -82,13 +82,13 @@ INSERT INTO utenti(id, nome, cognome, img, mail, password, tipo_utente)
 VALUES(default,'Rufy', 'Monkey D.','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234',1);
 /* ----------------------------------------popolare gli altri campi---------------------------------------*/
 INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+VALUES(default,'Goku', 'Son','/img/180863_148926285163044_148641161858223_266218_7815533_n-150x150.jpg','Goku@gmail.com','1234');
  
 INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+VALUES(default,'Stormtrooper', '2187','/img/180863_148926285163044_148641161858223_266218_7815533_n-150x150.jpg','Stormtrooper2187@gmail.com','1234');
  
 INSERT INTO utenti(id, nome, cognome, img, mail, password)
-VALUES(default,'', '','/img/167654_149070858481920_148641161858223_267054_8188355_n-150x150.jpg','Rufy@gmail.com','1234');
+VALUES(default,'Stormtrooper', '7812','/img/5f608695abe0aca21adb54ea329a63c7.jpg','Stormtrooper7812@gmail.com','1234');
      
 /*Popolamento tabella tipoPost*/
 INSERT INTO tipiPost (id, nome)
