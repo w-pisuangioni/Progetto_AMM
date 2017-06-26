@@ -6,8 +6,12 @@ package NerdBook.srv;
  * and open the template in the editor.
  */
 
+
+import NerdBook_package.Gruppi;
+import NerdBook_package.GruppiFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,10 +37,36 @@ public class Bacheca extends HttpServlet {
             throws ServletException, IOException {
                 response.setContentType("text/html;charset=UTF-8");
         
+           
         //Apertura della sessione
         HttpSession session = request.getSession();
-    }
+        
+                //se la sessione esiste ed esiste anche l'attributo loggedIn impostato a true
+        if(session!=null && 
+           session.getAttribute("loggedIn")!=null &&
+           session.getAttribute("loggedIn").equals(true)){
+            
+            //controllo se è impostato il parametro get "user" che mi consente
+            //di visualizzare una bacheca di uno specifico gatto.
+            String user = request.getParameter("user");
+            
+            int userID;
 
+            if(user != null){
+                userID = Integer.parseInt(user);
+            } else {
+                Integer loggedUserID = (Integer)session.getAttribute("loggedUserID");
+                userID = loggedUserID;
+            }
+            List<Gruppi> gruppi = GruppiFactory.getInstance().getGruppiListByUserId(userID);
+            request.setAttribute("gruppi", gruppi);
+
+            request.getRequestDispatcher("bacheca.jsp").forward(request, response);
+        }
+        else{
+            request.getRequestDispatcher("Login").forward(request, response);
+        } 
+    }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

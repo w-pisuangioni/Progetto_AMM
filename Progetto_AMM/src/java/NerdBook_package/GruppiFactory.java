@@ -117,6 +117,44 @@ public Gruppi getGruppoByid(int id){
     }
 
 /*gestione tabella membri gruppi */
+   
+   /*ritorna lista gruppi acui l'utente appartiene*/
+      public List getGruppiListByUserId(int userId) {
+        List<Gruppi> lista_gruppi = new ArrayList<Gruppi>();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "Pisu", "amm2017");
+            
+            String query = 
+                      "select * from membri join gruppi"
+                    + "on membri.id_gruppo=gruppi.id"
+                    + "where membri.id_utente = ? ";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            // Si associano i valori
+            stmt.setInt(1, userId);
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            while (res.next()) {
+                Gruppi current = new Gruppi();
+                current.setId(res.getInt("id"));
+                current.setNome(res.getString("nome"));
+                current.setCreatore(res.getInt("creatore"));
+                lista_gruppi.add(current);
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return lista_gruppi;
+    }
 }
 
 
