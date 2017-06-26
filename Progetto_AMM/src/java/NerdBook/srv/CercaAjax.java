@@ -5,20 +5,21 @@
  */
 package NerdBook.srv;
 
+import NerdBook_package.Utenti_Registrati;
+import NerdBook_package.Utenti_RegistratiFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author pisuw
  */
-public class Profilo extends HttpServlet {
-
+public class CercaAjax extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -28,14 +29,34 @@ public class Profilo extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                response.setContentType("text/html;charset=UTF-8");
-        
-        //Apertura della sessione
-        HttpSession session = request.getSession();
-    }
+       
+    
+         String command = request.getParameter("cmd");
+        if (command != null) 
+        {
+            // Verifica che commando e id siano stati impostati
+            if (command.equals("search")){
+                // Esegue la ricerca
+                List<Utenti_Registrati> listaUtenti = Utenti_RegistratiFactory.getInstance()
+                        .getUtentiList(request.getParameter("nomeUtenteCercato"));
+                
+                request.setAttribute("listaUtenti", listaUtenti);
+                
+                // Quando si restituisce del json e' importante segnalarlo ed evitare il caching
+                response.setContentType("application/json");
+                response.setHeader("Expires", "Sat, 6 May 1995 12:00:00 GMT");
+                response.setHeader("Cache-Control", "no-store, no-cache, "
+                        + "must-revalidate");
+                // Genero il json con una jsp
+                request.getRequestDispatcher("listaUtentiJson.jsp").
+                        forward(request, response);
+            }
+        }
+    }    
+
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

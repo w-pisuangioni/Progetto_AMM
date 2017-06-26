@@ -4,7 +4,6 @@
         <servlet-name>PostFactory</servlet-name>
         <servlet-class>NerdBook_package.PostFactory</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>NerdBook.srv.Login</servlet-class>
@@ -20,6 +19,10 @@
     <servlet>
         <servlet-name>descrizione</servlet-name>
         <servlet-class>NerdBook.srv.Descrizione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CercaAjax</servlet-name>
+        <servlet-class>NerdBook.srv.CercaAjax</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PostFactory</servlet-name>
@@ -40,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>descrizione</servlet-name>
         <url-pattern>/descrizione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CercaAjax</servlet-name>
+        <url-pattern>/CercaAjax</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

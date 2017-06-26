@@ -9,7 +9,7 @@
 <html>
     
     <head>
-        <title>NerdBook - Descrizione </title>
+        <jsp:include page="head.jsp"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="William Pisu">

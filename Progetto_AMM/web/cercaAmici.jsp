@@ -19,8 +19,10 @@
        <div id="divBody">
             <div id="searchUser">
                 <input id="searchField" type="text" placeholder="Cerca..." value="">
-                <button id="cerca">Invia</button>
+               <!-- <button onclick="cercaUtente()">Cerca</button> -->
+                <button id="cerca">Cerca</button>
             </div>
+           
             <div id="ListaUtenti">
                 <c:forEach var="utente" items="${utenti}">
                     <div class="user"> <!-- creare classe user per gestire la visualizzazione dei dati di un utente -->

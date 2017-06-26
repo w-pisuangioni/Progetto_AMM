@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <div id="leftbar">
+        <!--<div id="leftbar">-->
             <p id="Persone">
                   <c:forEach items="${utenti}" var="utente" >
                      <li>${utente.nome}</li>
@@ -25,6 +25,6 @@
                   </c:forEach>
                 
             </p>  
-        </div>
+        <!--</div>-->
     </body>
 </html>

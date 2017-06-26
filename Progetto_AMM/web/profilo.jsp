@@ -3,7 +3,7 @@
     Created on : 5-giu-2017, 10.48.25
     Author     : pisuw
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,9 @@
         <jsp:include page="top.jsp"/>
        
         <div id="central">
-            <jsp:include page="left.jsp"/>
+            <div id="leftbar">
+               <jsp:include page="left.jsp"/>
+            </div>
             <div id="leftbar">
               <!--<div class="Cerca">
                 </div> -->

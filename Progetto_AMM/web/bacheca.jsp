@@ -3,7 +3,7 @@
     Created on : 1-giu-2017, 12.17.30
     Author     : pisuw
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,11 +20,14 @@
     <body>
         <c:set var="title"/>
         <jsp:include page="top.jsp"/>
-        <jsp:include page="cercaAmici.jsp"/> 
-         <jsp:include page="left-bar.jsp"/> 
+        <div id="leftbar">
+          <jsp:include page="cercaAmici.jsp"/> 
+          <jsp:include page="left-bar.jsp"/> 
+        </div>
+        
         <div id="central">
                    <!-- prima left bar qui?-->
-            <div id="leftbar">
+            <!--<div id="leftbar">-->
               <!--<div class="Cerca">
                 </div> -- >
                 <p id="Persone">
