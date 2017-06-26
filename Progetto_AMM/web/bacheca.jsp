@@ -21,11 +21,9 @@
         <c:set var="title"/>
         <jsp:include page="top.jsp"/>
         <jsp:include page="cercaAmici.jsp"/> 
+         <jsp:include page="left-bar.jsp"/> 
         <div id="central">
-            
-             <jsp:include page="left-bar.jsp"/> 
-           
-            <!--*
+                   <!-- prima left bar qui?-->
             <div id="leftbar">
               <!--<div class="Cerca">
                 </div> -- >
